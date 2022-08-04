@@ -1,0 +1,31 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1700.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "scanzy-barcodescanner-sample-xamarin-ios", "scanzy-barcodescanner-sample-xamarin-ios\scanzy-barcodescanner-sample-xamarin-ios.csproj", "{0451FD7E-A4E2-466C-8046-20C2771461E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0451FD7E-A4E2-466C-8046-20C2771461E2}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{0451FD7E-A4E2-466C-8046-20C2771461E2}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{0451FD7E-A4E2-466C-8046-20C2771461E2}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{0451FD7E-A4E2-466C-8046-20C2771461E2}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{0451FD7E-A4E2-466C-8046-20C2771461E2}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{0451FD7E-A4E2-466C-8046-20C2771461E2}.Debug|iPhone.Build.0 = Debug|iPhone
+		{0451FD7E-A4E2-466C-8046-20C2771461E2}.Release|iPhone.ActiveCfg = Release|iPhone
+		{0451FD7E-A4E2-466C-8046-20C2771461E2}.Release|iPhone.Build.0 = Release|iPhone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86287344-1C24-4485-9938-29ED4202670D}
+	EndGlobalSection
+EndGlobal

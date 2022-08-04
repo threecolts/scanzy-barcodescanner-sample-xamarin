@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1700.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "scanzy-barcodescanner-sample-xamarin-android", "scanzy-barcodescanner-sample-xamarin-android\scanzy-barcodescanner-sample-xamarin-android.csproj", "{32F311B7-3FDA-41C0-9913-5630EFE0A246}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32F311B7-3FDA-41C0-9913-5630EFE0A246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F311B7-3FDA-41C0-9913-5630EFE0A246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F311B7-3FDA-41C0-9913-5630EFE0A246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F311B7-3FDA-41C0-9913-5630EFE0A246}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B5A44FA-1C62-49C6-B8F8-16BD8B3A1FE4}
+	EndGlobalSection
+EndGlobal

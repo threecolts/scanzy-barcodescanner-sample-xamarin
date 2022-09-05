@@ -22,8 +22,6 @@ namespace scanzy_barcodescanner_sample_xamarin_android
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
 
-            
-
             Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
@@ -31,10 +29,9 @@ namespace scanzy_barcodescanner_sample_xamarin_android
             fab.Click += FabOnClick;
 
             Android.Widget.Button btnScan = FindViewById<Android.Widget.Button>(Resource.Id.btnScan);
-            //fab.Click += FabOnClick;
-
+ 
             btnScan.Click += BtnScan_Click;
-            ScanzyBSLicense.SetLicense(this.ApplicationContext,"licensekey");
+            ScanzyBSLicense.SetLicense(this.ApplicationContext,"your-valid-licensekey");
         }
 
         private void BtnScan_Click(object sender, EventArgs e)

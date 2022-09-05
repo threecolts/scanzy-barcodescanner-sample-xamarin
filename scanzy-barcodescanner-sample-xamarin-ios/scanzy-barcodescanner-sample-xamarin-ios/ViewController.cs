@@ -10,7 +10,6 @@ namespace ios2
     {
 
         private UIViewController _uIViewController;
-
         public BarcodeDelegate(UIViewController uIViewController)
         {
             this._uIViewController = uIViewController;
@@ -30,18 +29,20 @@ namespace ios2
 
         partial void scan(NSObject sender)
         {
-            ScanzyBSLicense.SetLicense("abc");
-            ScanzyBSBarcodeFormat format = ScanzyBSBarcodeFormat.Code128;
-
-            ScanzyBSBarcodeOptions options = new ScanzyBSBarcodeOptions(format,true,true,true,false);
-
-            ScanzyBSBarcodePicker picker = new ScanzyBSBarcodePicker(options);
+            ScanzyBSBarcodeOptions options = new ScanzyBSBarcodeOptions(
+                ScanzyBSBarcodeFormat.Code128 | ScanzyBSBarcodeFormat.Ean13,
+                true,
+                true,
+                true,
+                false);
 
             mydelegate = new BarcodeDelegate(this);
+            ScanzyBarcodeManager.Scan(options, this, mydelegate);
 
-            picker.Delegate = mydelegate;
-            
-            this.PresentViewController(picker, true, null);
+            //ScanzyBSBarcodePicker picker = new ScanzyBSBarcodePicker(options);
+            //mydelegate = new BarcodeDelegate(this);
+            //picker.Delegate = mydelegate;
+            //this.PresentViewController(picker, true, null);
         }
 
         public ViewController (IntPtr handle) : base (handle)

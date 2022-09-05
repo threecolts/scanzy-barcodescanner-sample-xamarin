@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using ScanzyBarcodeScannerSDKBindings;
 using UIKit;
 
 namespace ios2
@@ -16,6 +17,7 @@ namespace ios2
         {
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
+            ScanzyBSLicense.SetLicense("your-valid-licensekey");
             return true;
         }
 

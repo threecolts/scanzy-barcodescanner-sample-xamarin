@@ -8,7 +8,6 @@ namespace ios2
 
     public class BarcodeDelegate : ScanzyBarcodeScannedProtocolDelegate
     {
-
         private UIViewController _uIViewController;
         public BarcodeDelegate(UIViewController uIViewController)
         {
@@ -39,10 +38,7 @@ namespace ios2
             mydelegate = new BarcodeDelegate(this);
             ScanzyBarcodeManager.Scan(options, this, mydelegate);
 
-            //ScanzyBSBarcodePicker picker = new ScanzyBSBarcodePicker(options);
-            //mydelegate = new BarcodeDelegate(this);
-            //picker.Delegate = mydelegate;
-            //this.PresentViewController(picker, true, null);
+           
         }
 
         public ViewController (IntPtr handle) : base (handle)

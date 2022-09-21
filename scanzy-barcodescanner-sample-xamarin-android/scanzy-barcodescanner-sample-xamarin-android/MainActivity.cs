@@ -31,7 +31,7 @@ namespace scanzy_barcodescanner_sample_xamarin_android
             Android.Widget.Button btnScan = FindViewById<Android.Widget.Button>(Resource.Id.btnScan);
  
             btnScan.Click += BtnScan_Click;
-            ScanzyBSLicense.SetLicense(this.ApplicationContext,"your-valid-licensekey");
+            ScanzyBSLicense.InitLicense(this.ApplicationContext, "BdyCh9eyxw$9#k2qX79Z");
         }
 
         private void BtnScan_Click(object sender, EventArgs e)

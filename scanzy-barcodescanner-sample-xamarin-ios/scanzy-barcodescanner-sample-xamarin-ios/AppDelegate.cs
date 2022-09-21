@@ -17,7 +17,7 @@ namespace ios2
         {
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
-            ScanzyBSLicense.SetLicense("your-valid-licensekey");
+            ScanzyBarcodeManager.SetLicense("BdyCh9eyxw$9#k2qX79Z");
             return true;
         }
 

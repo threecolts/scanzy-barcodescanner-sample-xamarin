@@ -14,9 +14,9 @@ namespace ios2
             this._uIViewController = uIViewController;
         }
 
-        public override void GetBarcode(string barcode)
+        public override void GetBarcode(string barcode, string barcodeType)
         {
-            var okAlertController = UIAlertController.Create("Barcode", barcode, UIAlertControllerStyle.Alert);
+            var okAlertController = UIAlertController.Create("Barcode", barcode+","+barcodeType, UIAlertControllerStyle.Alert);
             okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
             this._uIViewController.PresentViewController(okAlertController, true, null);
         }

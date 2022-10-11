@@ -88,14 +88,15 @@ namespace scanzy_barcodescanner_sample_xamarin_android
                     if(data != null)
                     {
                         string barcode = data.GetStringExtra("barcode");
-                        if(barcode.Equals("permission_missing"))
+                        string barcode_type = data.GetStringExtra("barcode_type");
+                        if (barcode.Equals("permission_missing"))
                         {
                             //You don't have valid license key
                         }
                         else
                         {
                             Android.App.AlertDialog.Builder alertDialog = new Android.App.AlertDialog.Builder(this);
-                            alertDialog.SetMessage(barcode).SetTitle("SCAN RESULT");
+                            alertDialog.SetMessage(barcode+","+barcode_type).SetTitle("SCAN RESULT");
                             Android.App.AlertDialog dialog = alertDialog.Create();
                             dialog.Show();
                         }

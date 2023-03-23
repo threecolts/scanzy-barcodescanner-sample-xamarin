@@ -112,7 +112,7 @@
       <Version>13.0.1</Version>
     </PackageReference>
     <PackageReference Include="ScanzyBarcodeScannerSDK.Xamarin">
-      <Version>0.0.5</Version>
+      <Version>0.0.8</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

@@ -1,4 +1,5 @@
-﻿using UIKit;
+﻿using ScanzyBarcodeScannerSDKBindings;
+using UIKit;
 
 namespace ios2
 {
@@ -10,6 +11,7 @@ namespace ios2
             // if you want to use a different Application Delegate class from "AppDelegate"
             // you can specify it here.
             UIApplication.Main(args, null, typeof(AppDelegate));
+            ScanzyBarcodeManager.SetLicense("your-valid-key");
         }
     }
 }

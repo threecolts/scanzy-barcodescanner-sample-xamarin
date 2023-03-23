@@ -31,21 +31,21 @@ namespace scanzy_barcodescanner_sample_xamarin_android
             Android.Widget.Button btnScan = FindViewById<Android.Widget.Button>(Resource.Id.btnScan);
  
             btnScan.Click += BtnScan_Click;
-            ScanzyBSLicense.InitLicense(this.ApplicationContext, "BdyCh9eyxw$9#k2qX79Z");
+            ScanzyBarcodeManager.SetLicense(this.ApplicationContext, "BdyCh9eyxw$9#k2qX79Z");
         }
 
         private void BtnScan_Click(object sender, EventArgs e)
         {
-            ScanzyBSBarcodeOptions barcodeOptions = new ScanzyBSBarcodeOptions(
+            ScanzyBarcodeOptions barcodeOptions = new ScanzyBarcodeOptions(
                 false,false,false,false,EnumSet.Of(
-                    ScanzyBSBarcodeFormat.Ean13,
-                    ScanzyBSBarcodeFormat.Upca,
-                    ScanzyBSBarcodeFormat.Code128));
+                    ScanzyBarcodeFormat.Ean13,
+                    ScanzyBarcodeFormat.Upca,
+                    ScanzyBarcodeFormat.Code128));
 
-            ScanzyBSBarcodeManager manager = new ScanzyBSBarcodeManager(this.ApplicationContext,barcodeOptions);
+            ScanzyBarcodeManager manager = new ScanzyBarcodeManager(this.ApplicationContext,barcodeOptions);
             var intent = manager.GetBarcodeScannerIntent(this);
 
-            StartActivityForResult(intent, ScanzyBSBarcodeManager.RcBarcodeCapture);
+            StartActivityForResult(intent, ScanzyBarcodeManager.RcBarcodeCapture);
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -81,7 +81,7 @@ namespace scanzy_barcodescanner_sample_xamarin_android
 
         protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Android.Content.Intent data)
         {
-            if(requestCode == ScanzyBSBarcodeManager.RcBarcodeCapture)
+            if(requestCode == ScanzyBarcodeManager.RcBarcodeCapture)
             {
                 if(resultCode == BarcodeScanStatus.Success)
                 {

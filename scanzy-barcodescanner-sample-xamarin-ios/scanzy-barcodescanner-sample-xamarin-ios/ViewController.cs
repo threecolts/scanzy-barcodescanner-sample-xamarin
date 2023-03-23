@@ -28,12 +28,12 @@ namespace ios2
 
         partial void scan(NSObject sender)
         {
-            ScanzyBSBarcodeOptions options = new ScanzyBSBarcodeOptions(
-                ScanzyBSBarcodeFormat.Code128 | ScanzyBSBarcodeFormat.Ean13,
+            ScanzyBarcodeOptions options = new ScanzyBarcodeOptions(
                 true,
                 true,
                 true,
-                false);
+                false,
+                ScanzyBarcodeFormat.Code128 | ScanzyBarcodeFormat.Ean13);
 
             mydelegate = new BarcodeDelegate(this);
             ScanzyBarcodeManager.Scan(options, this, mydelegate);

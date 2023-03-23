@@ -14,7 +14,7 @@ Firstly, set the license, it's better to do it in your app's startup, although i
 
 ```csharp
 
-ScanzyBSLicense.SetLicense("your-valid-licensekey");
+ScanzyBarcodeManager.SetLicense("your-valid-licensekey");
 
 ```
 
@@ -47,14 +47,14 @@ Then, insert below code snippet into the place to scan barcode, such as button c
 
   //support Code128, Ean13
   
-   ScanzyBSBarcodeFormat format = ScanzyBSBarcodeFormat.Code128 | ScanzyBSBarcodeFormat.Ean13;
+   ScanzyBarcodeFormat format = ScanzyBarcodeFormat.Code128 | ScanzyBarcodeFormat.Ean13;
 
    //enableVibration: true, vibrate your phone when barcode detected
    //enableBeep: true, play the beep sound when barcode detected
    //enableAutoZoom: the library will zoom in/out automatcially to scan the barcode
    //enableScanRectOnly: only scan the view finder area
-   ScanzyBSBarcodeOptions options = new ScanzyBSBarcodeOptions(format,true,true,true,false);
-   ScanzyBSBarcodePicker picker = new ScanzyBSBarcodePicker(options);
+   ScanzyBarcodeOptions options = new ScanzyBarcodeOptions(true,true,true,false, format);
+   ScanzyBarcodePicker picker = new ScanzyBarcodePicker(options);
    mydelegate = new BarcodeDelegate(this);
    picker.Delegate = mydelegate;
             
@@ -72,7 +72,7 @@ Firstly, set the license, it's better to do it in your app's startup, although i
 
 ```csharp
 
- ScanzyBSLicense.SetLicense(this.ApplicationContext,"Your-license-key");
+ ScanzyBarcodeManager.SetLicense(this.ApplicationContext,"Your-license-key");
 
 ```
 
@@ -85,15 +85,15 @@ Then, insert below code snippet into the place to scan barcode, such as button c
    //enableAutoZoom: the library will zoom in/out automatcially to scan the barcode
    //enableScanRectOnly: only scan the view finder area
    //support Code128, Ean13
-   ScanzyBSBarcodeOptions barcodeOptions = new ScanzyBSBarcodeOptions(
-                true,true,true,false,EnumSet.Of(
+   ScanzyBarcodeOptions barcodeOptions = new ScanzyBarcodeOptions(
+                EnumSet.Of(
                     ScanzyBSBarcodeFormat.Ean13,
-                    ScanzyBSBarcodeFormat.Code128));
+                    ScanzyBSBarcodeFormat.Code128),true,true,true,false);
 
-            ScanzyBSBarcodeManager manager = new ScanzyBSBarcodeManager(this.ApplicationContext,barcodeOptions);
+            ScanzyBarcodeManager manager = new ScanzyBarcodeManager(this.ApplicationContext,barcodeOptions);
             var intent = manager.GetBarcodeScannerIntent(this);
 
-            StartActivityForResult(intent, ScanzyBSBarcodeManager.RcBarcodeCapture);
+            StartActivityForResult(intent, ScanzyBarcodeManager.RcBarcodeCapture);
              
 ```
 
@@ -103,7 +103,7 @@ To get the barcode result from SDK, you should override the OnActivityResult. Fo
 
      protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Android.Content.Intent data)
         {
-            if(requestCode == ScanzyBSBarcodeManager.RcBarcodeCapture)
+            if(requestCode == ScanzyBarcodeManager.RcBarcodeCapture)
             {
                 if(resultCode == BarcodeScanStatus.Success)
                 {

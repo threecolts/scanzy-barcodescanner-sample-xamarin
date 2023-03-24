@@ -1,20 +1,26 @@
 # scanzy-barcodescanner-sample-xamarin
 scanzy barcode scanner sample for xamarin (native iOS, Android)
 
-## Environment Setup
+## Prerequisites
 
 .NET is a developer platform made up of tools, programming languages, and libraries for building many different types of applications. Xamarin extends the .NET developer platform with tools and libraries specifically for building apps for Android, iOS, tvOS, watchOS, macOS, and Windows.
 
 Follow the Microsoft official docs to install, configure the IDE for Xamarin: [Xamazin Docs](https://learn.microsoft.com/en-us/xamarin/get-started/installation/?pivots=windows-vs2022)
 
 
-## Get Started
+## Installation
 
-# Xamarin Native - iOS
+### Xamarin Native - iOS
 
 Install nuget package ScanzyBarcodeScannerSDK from visual studio nuget manager.
 
-To use this plugin:
+### Xamarin Native - Android
+
+Install nuget package ScanzyBarcodeScannerSDK from visual studio nuget manager.
+
+## Quick Start
+
+### iOS
 
 Firstly, set the license, it's better to do it in your app's startup, although it's fine to call this function every single time to scan the barcode.
 
@@ -67,12 +73,8 @@ Then, insert below code snippet into the place to scan barcode, such as button c
    this.PresentViewController(picker, true, null);
   
 ```
-# Xamarin Native - Android
 
-Install nuget package ScanzyBarcodeScannerSDK from visual studio nuget manager.
-
-
-To use this plugin in Javascript:
+### Android
 
 Firstly, set the license, it's better to do it in your app's startup, although it's fine to call this function every single time to scan the barcode.
 
@@ -135,6 +137,4 @@ To get the barcode result from SDK, you should override the OnActivityResult. Fo
         }
 
 ```
-
-That is all you need to use the plugin. :joy:
 

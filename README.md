@@ -22,7 +22,7 @@ Install nuget package ScanzyBarcodeScannerSDK from visual studio nuget manager.
 
 ### iOS
 
-Firstly, set the license, it's better to do it in your app's startup, although it's fine to call this function every single time to scan the barcode.
+First, set the license. It's better to do it in your app's startup, but it's fine to call this function every single time a barcode is scanned.
 
 ```csharp
 
@@ -30,7 +30,7 @@ ScanzyBarcodeManager.SetLicense("your-valid-licensekey");
 
 ```
 
-To get the barcode result from SDK, you should implement the delegate and override the GetBarcode method to follow your actual logic, such as display the alert dialog. For example,
+To get the barcode result from the SDK, you should implement the delegate and override the GetBarcode method to follow your actual logic, such as displaying an alert dialog. For example:
 
 ```csharp
 
@@ -53,7 +53,7 @@ To get the barcode result from SDK, you should implement the delegate and overri
 
 ```
 
-Then, insert below code snippet into the place to scan barcode, such as button click event:
+Then, insert the below code snippet into the place where you are scanning barcodes, such as a button click event:
 
 ```csharp
 
@@ -76,7 +76,7 @@ Then, insert below code snippet into the place to scan barcode, such as button c
 
 ### Android
 
-Firstly, set the license, it's better to do it in your app's startup, although it's fine to call this function every single time to scan the barcode.
+First, set the license. It's better to do it in your app's startup, but it's fine to call this function every single time a barcode is scanned.
 
 ```csharp
 
@@ -84,7 +84,7 @@ Firstly, set the license, it's better to do it in your app's startup, although i
 
 ```
 
-Then, insert below code snippet into the place to scan barcode, such as button click event:
+Then, insert the below code snippet into the place where you are scanning barcodes, such as a button click event:
 
 ```csharp
 
@@ -105,7 +105,7 @@ Then, insert below code snippet into the place to scan barcode, such as button c
              
 ```
 
-To get the barcode result from SDK, you should override the OnActivityResult. For example,
+To get the barcode result from the SDK, you should override the OnActivityResult. For example:
 
 ```csharp
 

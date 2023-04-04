@@ -1,5 +1,8 @@
 # scanzy-barcodescanner-sample-xamarin
-Scanzy barcode scanner sample for xamarin (native iOS, Android)
+Scanzy barcode scanner sample for xamarin (native iOS, Android), it implements the barcode capture capabilities of the ScanzyBarcodeScannerSDK for iOS and Android. It supports reading a large number of different barcode symbologies, such as Code39, Code93, Code128, Codabar, UPC-A, UPC-E, EAN-8, EAN-13, ITF, QRCode, Aztec, PDF-417, Data Matrix, etc.
+
+If you have any questions or need help, check out official website [scanzy.com](https://scanzy.com). Get a free trial license, you'll be able to integrate Scanzy SDK to your app in less than an hour, and it's insanely simple!
+
 
 ## Prerequisites
 
@@ -22,7 +25,7 @@ Install nuget package ScanzyBarcodeScannerSDK from visual studio nuget manager.
 
 ### iOS
 
-First, It's better to activate the SDK in your app's startup, although it's fine to call this function every single time a barcode is scanned. set the license you obtained from [Scanzy](https://scanzy.com) for free trial.
+First, It's better to activate the SDK in your app's startup, although it's fine to call this function every single time a barcode is scanned. set the license you obtained from [scanzy.com](https://scanzy.com) for free trial.
 
 ```csharp
 

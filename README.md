@@ -22,7 +22,7 @@ Install nuget package ScanzyBarcodeScannerSDK from visual studio nuget manager.
 
 ### iOS
 
-First, set the license. It's better to do it in your app's startup, but it's fine to call this function every single time a barcode is scanned.
+First, It's better to activate the SDK in your app's startup, although it's fine to call this function every single time a barcode is scanned. set the license you obtained from [Scanzy](https://scanzy.com) for free trial.
 
 ```csharp
 

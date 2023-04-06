@@ -60,20 +60,20 @@ Then, insert the below code snippet into the place where you are scanning barcod
 
 ```csharp
 
-  //support Code128, Ean13
-  
-   ScanzyBarcodeFormat format = ScanzyBarcodeFormat.Code128 | ScanzyBarcodeFormat.Ean13;
-
    //enableVibration: true, vibrate your phone when barcode detected
    //enableBeep: true, play the beep sound when barcode detected
    //enableAutoZoom: the library will zoom in/out automatcially to scan the barcode
    //enableScanRectOnly: only scan the view finder area
-   ScanzyBarcodeOptions options = new ScanzyBarcodeOptions(true,true,true,false, format);
-   ScanzyBarcodePicker picker = new ScanzyBarcodePicker(options);
-   mydelegate = new BarcodeDelegate(this);
-   picker.Delegate = mydelegate;
-            
-   this.PresentViewController(picker, true, null);
+   
+    ScanzyBarcodeOptions options = new ScanzyBarcodeOptions(
+                true,
+                true,
+                true,
+                false,
+                ScanzyBarcodeFormat.Code128 | ScanzyBarcodeFormat.Ean13);  //support Code128, Ean13
+
+    mydelegate = new BarcodeDelegate(this);
+    ScanzyBarcodeManager.Scan(options, this, mydelegate);
   
 ```
 
